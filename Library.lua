@@ -3606,7 +3606,7 @@ do
 
         local CheckImage = New("ImageLabel", {
             Image = CheckIcon and CheckIcon.Url or "",
-            ImageColor3 = "FontColor",
+            ImageColor3 = "AccentColor",
             ImageRectOffset = CheckIcon and CheckIcon.ImageRectOffset or Vector2.zero,
             ImageRectSize = CheckIcon and CheckIcon.ImageRectSize or Vector2.zero,
             ImageTransparency = 1,
