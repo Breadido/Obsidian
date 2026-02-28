@@ -6460,7 +6460,7 @@ function Library:CreateWindow(WindowInfo)
         })
 
         --// Footer
-        New("TextLabel", {
+        local epicfooter = New("TextLabel", {
             BackgroundTransparency = 1,
             Size = UDim2.fromScale(1, 1),
             Text = WindowInfo.Footer,
@@ -6687,6 +6687,12 @@ function Library:CreateWindow(WindowInfo)
         
         WindowTitle.Text = title
         WindowInfo.Title = title
+    end
+
+	function Window:ChangeFooter(title)
+        assert(typeof(title) == "string", "Expected string for title got: " .. typeof(title))
+        
+        epicfooter.Text = title
     end
 
     function Window:AddTab(...)
